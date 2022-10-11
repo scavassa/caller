@@ -1,0 +1,16 @@
+name: Reusable Workflow Caller
+
+on:
+  push:
+    branches:
+      - 'main'
+  workflow_dispatch:
+
+jobs:
+  continuous-delivery:
+    uses: scavassa/receiver/.github/workflows/receiver.yaml@main
+    with:
+      image_path: 'parent_folder/project/image'
+      image_tag: '${{github.sha}}'
+      dockerfile_path: 'project/Dockerfile'
+      environmnet: 'DEV'
