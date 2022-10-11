@@ -13,4 +13,4 @@ jobs:
       image_path: 'parent_folder/project/image'
       image_tag: '${{github.sha}}'
       dockerfile_path: 'project/Dockerfile'
-      environmnet: 'DEV'
+      environment: 'DEV'
